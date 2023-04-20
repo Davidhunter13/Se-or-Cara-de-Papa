@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+}
+
+.fondo{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(98, 98, 221);
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.fondo .face img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: 1;
+}
+
+.fondo .hat img {
+    position: absolute;
+    top: 17px;
+    left: 177px;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+
+.fondo:hover  .hat img{
+    top: -200px;
+}  
+
+
+.fondo .mago {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    top: -200px;
+    left: 194px;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.fondo .mago img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fondo:hover  .mago{
+    top: -19px;
+    left: 194px; 
+}  
+
+
+
+.fondo .eye-left img {
+    position: absolute;
+    top: 179px;
+    left: 298px;
+    z-index: 3;
+}
+
+
+
+.fondo .eye-left::after{
+    position: absolute;
+    content: "";
+    width: 94px;
+    height: 98px;
+    border-radius: 50%;
+    top: 176px;
+    left: 298px;
+    clip-path: inset(0 0 100% 0);
+    background-color: #c8a181;
+    z-index: 4 ;
+    transition:  0.5s ease-in-out;
+
+}
+
+
+ .fondo:hover  .eye-left::after{
+    clip-path: inset(0 0 75% 0);
+    /* box-shadow: 0px 0px 5px 0px black; */
+   
+}  
+
+
+
+.fondo .eye-right img {
+    position: absolute ;
+    top: 179px;
+    left: 210px;
+    z-index: 3;
+}
+
+.fondo .eye-right::after{
+    position: absolute;
+    content: "";
+    width: 94px;
+    height: 98px;
+    border-radius: 50%;
+    top: 176px;
+    left: 208px;
+    clip-path: inset(0 0 100% 0);
+    background-color: #c8a181;
+    z-index: 4 ;
+    transition:  0.5s ease-in-out;
+
+}
+
+
+ .fondo:hover  .eye-right::after{
+    clip-path: inset(0 0 75% 0);
+    /* box-shadow: 0px 0px 5px 0px black; */
+   
+}  
+
+
+
+.fondo .ear-right img {
+    position: absolute;
+    top: 144px;
+    left: 377px;
+    z-index: 0;
+}
+
+.fondo .ear-left img {
+    position: absolute;
+    top: 144px;
+    left: 110px;
+    z-index: 0;
+}
+
+.fondo .nose img {
+    position: absolute;
+    top: 233px;
+    left: 228px;
+    z-index: 5;
+}
+
+.fondo .moustache img {
+    position: absolute;
+    top: 365px;
+    left: 207px;
+    z-index: 4;
+}
+
+
+.fondo .moustache::after{
+    position: absolute;
+    content: "";
+    width: 94px;
+    height: 35px;
+    border-radius: 0px 0px 100px 100px;
+    top: 390px;
+    left: 250px;
+    z-index: 3;
+    clip-path: inset(0 0 100% 0);
+    background-color: #c44f87;
+    transition:  0.5s ease-in-out;
+
+}
+
+.fondo:hover  .moustache::after{
+    clip-path: inset(0 0 0% 0);
+    /* box-shadow: 0px 0px 5px 0px black; */
+   
+}  
+
+.fondo .foot-right img {
+    position: absolute;
+    bottom: 84px;
+    left: 322px;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+}
+
+ .fondo:hover  .foot-right img{
+    transform: rotate(-20deg);
+    bottom: 100px;
+    left: 340px;
+    /* box-shadow: 0px 0px 5px 0px black; */
+   
+}  
+
+.fondo .foot-left img {
+    position: absolute;
+    bottom: 84px;
+    left: 142px;
+    z-index: 0;
+}
